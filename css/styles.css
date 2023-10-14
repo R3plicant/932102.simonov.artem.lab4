@@ -1,0 +1,142 @@
+body {
+    font-family: Arial;
+    margin: 0;
+}
+.flex-content {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #edeef0;
+}
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background-color: #507299;
+}
+.header-logo-container {
+    max-width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0 50px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.content {
+    flex: auto 1 1;
+    display: flex;
+    padding-top: 50px;
+}
+.container {
+    display: flex;
+    gap: 10px;
+    max-width: 1030px;
+    padding: 20px 10px;
+    margin: 0 auto;
+}
+.navbar {
+    flex: 0 1 20%;
+}
+.navbar-ul {
+    display: grid;
+}
+.navbar-ul-a {
+    padding: 10px;
+    color: #2e5473;
+    text-decoration: none;
+}
+.navbar-ul-a:hover {
+    background-color: #e1e5eb;
+}
+.content__main {
+    flex: 0 1 50%;
+}
+.main-block {
+    display: grid;
+    gap: 20px;
+}
+.article {
+    display: grid;
+    gap: 10px;
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.2);
+}
+.article__header {
+    font-size: 18px;
+}
+.spacer {
+    height: 2px;
+    width: 100%;
+    background-color: #d0d0d0;
+}
+.article__header + .spacer {
+    position: relative;
+    width: 120%;
+    left: -10%;
+}
+.article__content::selection {
+    background-color: #e1e5eb;
+    color: green;
+}
+.article__content img {
+    width: 100%;
+}
+.article-footer {
+    display: flex;
+    justify-content: space-between;
+}
+.article-footer__button {
+    color: #507299;
+    text-decoration: none;
+}
+.footer {
+    background-color: #fff;
+    color: #d0d0d0;
+    padding: 5px 0;
+    text-align: center;
+}
+.fixed-block {
+    position: fixed;
+    top: 0;
+    right: 0;
+    display: grid;
+    gap: 15px;
+    padding: 70px 10% 20px 0;
+}
+.fixed-item {
+    display: grid;
+    gap: 10px;
+    max-width: 150px;
+    background-color: #fff;
+    padding: 20px 10px;
+    box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+.fixed-item__content {
+    background-color: #edeef0;
+}
+.fixed-item__title {
+    font-size: 16px;
+    padding: 0 5px;
+}
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        padding: 15px;
+        gap: 30px;
+    }
+    .fixed-block {
+        display: none;
+    }
+    .navbar-ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
